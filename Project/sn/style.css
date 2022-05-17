@@ -1,0 +1,246 @@
+
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=DM+Serif+Display:ital@1&family=Source+Sans+Pro&display=swap" rel="stylesheet');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+.container {
+    
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.875rem;
+}
+
+.menuToggle {
+    display: none;
+}
+
+header {
+    font-family: 'DM Serif Display', serif;
+    background-color: #92BA92;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.5) 0px 4px 6px -2px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+a{
+    text-decoration: none;
+    color: #F1DDBF;
+    text-shadow: 2px 2px #525E75;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+}
+
+.header .navigation{
+    list-style: none;
+    display: flex;
+}
+
+.header .navigation li{
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+}
+
+.header .navigation li.active {
+    border-bottom: 2px solid #78938A;
+}
+
+.header .navigation li:hover {
+    border-bottom: 2px solid #78938A;
+}
+
+@media(max-width: 800px) {
+    .header .navigation {
+        display: none;
+    }
+
+    .header .menuToggle{
+        display: flex;
+        font-size: 1.3rem;
+    }
+
+    .container.main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header .navigation.active {
+        display: flex;
+        position: fixed;
+        top: 4rem;
+        background: #f7f7f7;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.25rem;
+        animation: slide 0.2s ease;
+    }
+
+    @keyframes slide {
+        0% {
+            left: -300px;
+        }
+
+        100% {
+            left: 0%;
+        }
+    }
+
+    .header .navigation {
+        margin-left: 0rem;
+        padding: 1rem 0;
+    }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  position: relative;
+  background-color:  #92BA92;
+  font-family: 'BIZ UDPMincho', serif;
+}
+
+button{
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  background: #f7f7f7;
+  border: 1px solid #f7f7f7;
+}
+
+button:hover{
+  color: #f7f7f7;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#modal{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#inner_modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#inner_modal textarea{
+  width: 276px;
+  height: 276px;
+  padding: 25px;
+  outline: none;
+  resize: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+#inner_modal i{
+  font-size: 1.4rem;
+  color: gray;
+  cursor: pointer;
+  margin-top: -285px;
+  margin-left: -35px;
+  transition: 1s ease-in-out;
+}
+
+#inner_modal i:hover{
+  color: lightgray;
+}
+
+.container{
+  width: 1280px;
+  margin: auto;
+}
+
+#header{
+  color: white;
+  padding: 0 20px;
+  min-height: 70px;
+  text-shadow: 1px 1px black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fas{
+  color: #F1DDBF;
+}
+
+#all_notes{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.note{
+  width:300px;
+  height: 300px;
+  transition: 2s;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
+}
+
+.note h1{
+  font-size: 1.5rem;
+}
+
+.details {
+  margin-top: 25px;
+  padding: 0 15px;
+  font-size: 1.5rem;
+}
+
+.details i{
+  color: #F7F7F7;
+  cursor: pointer;
+  text-shadow: 1px 1px #BBB;
+}
+
+@media(max-width:1280px){
+  .container{
+    width: 100%;
+  }
+}
+
+@media(max-width:768px){
+  #header{
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

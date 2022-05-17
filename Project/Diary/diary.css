@@ -1,0 +1,376 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*nav bar*/
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=DM+Serif+Display:ital@1&family=Source+Sans+Pro&display=swap" rel="stylesheet');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+.container {
+    
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.875rem;
+}
+
+.menuToggle {
+    display: none;
+}
+
+header {
+    font-family: 'DM Serif Display', serif;
+    background-color: #78938A;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.5) 0px 4px 6px -2px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+a{
+    text-decoration: none;
+    color: #F1DDBF;
+    text-shadow: 2px 2px #525E75;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+}
+
+.header .navigation{
+    list-style: none;
+    display: flex;
+}
+
+.header .navigation li{
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+}
+
+.header .navigation li.active {
+    border-bottom: 2px solid #78938A;
+}
+
+.header .navigation li:hover {
+    border-bottom: 2px solid #78938A;
+}
+
+@media(max-width: 800px) {
+    .header .navigation {
+        display: none;
+    }
+
+    .header .menuToggle{
+        display: flex;
+        font-size: 1.3rem;
+    }
+
+    .container.main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header .navigation.active {
+        display: flex;
+        position: fixed;
+        top: 4rem;
+        background: #f7f7f7;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.25rem;
+        animation: slide 0.2s ease;
+    }
+
+    @keyframes slide {
+        0% {
+            left: -300px;
+        }
+
+        100% {
+            left: 0%;
+        }
+    }
+
+    .header .navigation {
+        margin-left: 0rem;
+        padding: 1rem 0;
+    }
+}
+/*nav end*/
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.home {
+  
+    color: #F7F7F7;
+    font-size: 20px;
+    border: 5px solid #78938A;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-right: 180px;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+}
+
+body {
+  font-family: 'BIZ UDPMincho', serif;
+  line-height: 1.6;
+  background: #92BA92;
+  color: #F1DDBF;
+  margin: 0 auto;
+  padding: 0;
+  
+}
+
+/* Global Typography */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+form,
+textarea {
+  font-size: 1rem;
+}
+
+button {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: #0a2472;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Section Container Positions, Spacing, Utilities */
+
+header {
+  text-align: center;
+  margin: 1em auto;
+}
+
+.section {
+  box-shadow: 0px 0px 0px 0px #525e75;
+  padding: 1em 1em;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 1em;
+}
+
+.container-row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Button Standard */
+
+.btn-main,
+.btn-light,
+.btn-dark {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  transition: all 0.1s;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-main {
+  color: lightgoldenrodyellow;
+  background-color: #78938a;
+}
+
+.btn-light {
+  color: #0a2472;
+  background-color: white;
+}
+
+.btn-dark {
+  color: white;
+  background-color: #0a2472;
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: lightgoldenrodyellow;
+  color: #78938a;
+  font-weight: 700;
+  transform: scale(1.08);
+}
+
+/* Project Starts Here */
+
+/* Journal Entry Section */
+
+/* Title */
+
+.entry-text-title {
+  width: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 2px;
+  border: unset;
+  background-color: lightgoldenrodyellow;
+  font-family: 'Space Mono', monospace;
+}
+
+.entry-text-title:focus {
+  outline-color: #78938a;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #78938a;
+  font-size: 1rem;
+}
+
+.entry-text-title::placeholder {
+  color:#78938a;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+}
+
+.entry-text-title::-ms-value {
+  color: #78938a;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+}
+
+/* Text Box */
+
+.container-row-journal {
+  display: flex;
+  justify-content: center;
+}
+
+.entry-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.journal-label {
+  display: block;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.entry-text-box {
+  width: 100%;
+  height: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 2px;
+  border: unset;
+  background-color: lightgoldenrodyellow;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media (min-width: 769px) {
+  .entry-text-box {
+    width: 40em;
+    height: 20em;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 2px;
+    border: unset;
+    background-color: lightgoldenrodyellow;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+}
+
+.entry-text-box:focus {
+  outline-color: #78938a;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #78938a;
+  font-size: 1rem;
+}
+
+.entry-text-box::placeholder {
+  color: #78938a;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+}
+
+.entry-submit-btn {
+  margin: 0;
+}
+
+/* Journal Results Section */
+
+.sectionEntryResults {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.entryResultRow {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin: 1em auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.single-entry-div {
+  max-width: 100%;
+
+  margin: 1em auto;
+  padding: 1em 1em;
+}
+
+.single-entry-date {
+  background-color: #78938a;
+  width: 100%;
+}
+
+.heading-results {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: lightgoldenrodyellow;
+}

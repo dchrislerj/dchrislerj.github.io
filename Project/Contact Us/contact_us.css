@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=DM+Serif+Display:ital@1&family=Source+Sans+Pro&display=swap" rel="stylesheet');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+.container {
+    
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.875rem;
+}
+
+.menuToggle {
+    display: none;
+}
+
+header {
+    font-family: 'DM Serif Display', serif;
+    background-color: #78938A;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.5) 0px 4px 6px -2px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+a{
+    text-decoration: none;
+    color: #F1DDBF;
+    text-shadow: 2px 2px #525E75;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+}
+
+.header .navigation{
+    list-style: none;
+    display: flex;
+}
+
+.header .navigation li{
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+}
+
+.header .navigation li.active {
+    border-bottom: 2px solid #78938A;
+}
+
+.header .navigation li:hover {
+    border-bottom: 2px solid #78938A;
+}
+
+@media(max-width: 800px) {
+    .header .navigation {
+        display: none;
+    }
+
+    .header .menuToggle{
+        display: flex;
+        font-size: 1.3rem;
+    }
+
+    .container.main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header .navigation.active {
+        display: flex;
+        position: fixed;
+        top: 4rem;
+        background: #f7f7f7;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.25rem;
+        animation: slide 0.2s ease;
+    }
+
+    @keyframes slide {
+        0% {
+            left: -300px;
+        }
+
+        100% {
+            left: 0%;
+        }
+    }
+
+    .header .navigation {
+        margin-left: 0rem;
+        padding: 1rem 0;
+    }
+}
+
+body{
+    background: #92BA92;
+    font-size: 14px;
+}
+
+.container h1{
+    font-family: 'BIZ UDPMincho', serif;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.container p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.container a h1{
+    color: #f7f7f7;
+    font-size: 20px;
+    border: 5px solid #f7f7f7;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-right: 160px;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.contact-box{
+    background: #fff;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px 0px #525e75 ;
+}
+
+.contact-left h3{
+    color: #525e75;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-right h3{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-left{
+    font-family: 'BIZ UDPMincho', serif;
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact-right{
+    font-family: 'BIZ UDPMincho', serif;
+    flex-basis: 40%;
+    padding: 40px;
+    background: #78938a;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group{
+    flex-basis: 45%;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #f1ddbf;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid #f1ddbf;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: #525e75;
+}
+
+button{
+    background: #525e75;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px #525e75 ;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+}
